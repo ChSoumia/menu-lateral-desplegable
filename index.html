@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-expanded">
+    <div id="sidemenu" class="menu-collapsed">
+
+      <!-- Header -->
+      <div id="header">
+        <div id="title"><span><img src="https://img.icons8.com/metro/52/000000/twitter.png"/></span></div>
+        <div id="menu-btn">
+          <div class="btn-hamburguer"></div>
+          <div class="btn-hamburguer"></div>
+          <div class="btn-hamburguer"></div>
+        </div>
+      </div>
+
+      <!-- Profile -->
+      <div id="profile">
+        <div id="photo"><img src="perfil.jpg"/></div>
+        <div id="name"><span>Nombre Apellido</span></div>
+      </div>
+
+      <!-- Items -->
+
+      <div id="menu-items">
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="https://img.icons8.com/sf-regular/96/000000/home-automation.png"/></div>
+            <div class="title"><span>Home</span></div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="https://img.icons8.com/sf-regular/48/000000/secured-letter.png"/></div>
+            <div class="title"> <span>Messages</span></div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="https://img.icons8.com/sf-regular/96/000000/appointment-reminders.png"/></div>
+            <div class="title"><span>Notifications</span></div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="https://img.icons8.com/sf-regular/96/000000/overview-pages-2.png"/></div>
+            <div class="title"><span>Listas</span></div>
+          </a>
+        </div>
+
+        <div class="item separator">
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="https://img.icons8.com/sf-regular/96/000000/connection-status-off.png"/></div>
+            <div class="title"><span>More</span></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="main-container">
+      Hola Todos
+    </div>
+
+
+    <script>
+      const btn = document.querySelector('#menu-btn');
+      const menu = document.querySelector('#sidemenu');
+      btn.addEventListener('click', e =>{
+          menu.classList.toggle("menu-expanded");
+          menu.classList.toggle("menu-collapsed");
+
+          document.querySelector('body').classList.toggle("menu-expanded");
+      });
+    </script>
+</body>
+</html>
